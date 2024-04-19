@@ -1,0 +1,20 @@
+
+executable = condor_step3.sh
+transfer_input_files = ../step3_ticlv5.py
+environment = "INDEX=$(SampleId) INPUT_FOLDER=$(InputFolder)"
+universe = vanilla
+output = logs/step3_$(SampleId).out
+error = logs/step3_$(SampleId).err
+log = logs/step3_$(SampleId).log
+transfer_output_files = ""
+
+request_memory = 25G
+# can only be 1 or 8 on LLR T3
+request_cpus = 8
+
+T3Queue = $(T3Queue:long)
+WNTag = $(WNTag:el7)
+include : /opt/exp_soft/cms/t3/t3queue |
+
+InputFolder = /grid_mnt/data__data.polcms/cms/tarabini/pions_forPID/step2/
+queue SampleId from seq 1 2 | 
