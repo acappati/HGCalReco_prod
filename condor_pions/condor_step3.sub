@@ -17,4 +17,4 @@ WNTag = $(WNTag:el7)
 include : /opt/exp_soft/cms/t3/t3queue |
 
 InputFolder = /grid_mnt/data__data.polcms/cms/tarabini/pions_forPID/step2/
-queue SampleId from seq 1 2 | 
+queue SampleId from seq 1 120 | 
