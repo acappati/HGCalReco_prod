@@ -13,6 +13,6 @@ EOF
 cmsRun -n 8 step3_ticlv5.py
 
 set +e
-mkdir -p /grid_mnt/data__data.polcms/cms/cappati/240419_photons_step3/
-mv histo.root /grid_mnt/data__data.polcms/cms/cappati/240419_photons_step3/step3_dumper_$INDEX.root
+mkdir -p /grid_mnt/data__data.polcms/cms/cappati/240429_photons_step3/
+mv histo.root /grid_mnt/data__data.polcms/cms/cappati/240429_photons_step3/step3_dumper_$INDEX.root
 
