@@ -1,0 +1,24 @@
+# Parameters (need absolute paths)
+ConfigPath =  /home/llr/cms/cappati/240329_TICLv5/CMSSW_14_0_0_pre0/src/HGCalReco_prod/condor_pions_step2
+
+executable = $(ConfigPath)/condor.sh
+transfer_input_files = $(ConfigPath)/CloseByParticle_Pion_GEN_SIM.py, $(ConfigPath)/step2_DIGI_L1TrackTrigger_L1_DIGI2RAW_HLT_PU.py
+transfer_output_files = ""
+environment = "INDEX=$(SampleId)"
+universe = vanilla
+
+output = logs/step2_$(SampleId).out
+error = logs/step2_$(SampleId).err
+log = logs/step2_$(SampleId).log
+
+request_memory = 20G
+# can only be 1 or 8 on LLR T3
+request_cpus = 8
+
+T3Queue = $(T3Queue:short)
+WNTag = $(WNTag:el7)
+include : /opt/exp_soft/cms/t3/t3queue |
+
+priority=-15
+
+queue SampleId from seq 200 300 |
