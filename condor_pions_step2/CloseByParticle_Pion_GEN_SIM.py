@@ -27,7 +27,7 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 # random seeds
-process.RandomNumberGeneratorService.generator.initialSeed = cms.untracked.uint32(81)
+#process.RandomNumberGeneratorService.generator.initialSeed = cms.untracked.uint32(81) #like this the seed is always the same
 
 process.maxEvents = cms.untracked.PSet(
         input = cms.untracked.int32(100),
