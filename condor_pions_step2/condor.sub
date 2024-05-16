@@ -1,5 +1,5 @@
 # Parameters (need absolute paths)
-ConfigPath =  /home/llr/cms/cappati/240329_TICLv5/CMSSW_14_0_0_pre0/src/HGCalReco_prod/condor_pions_step2
+ConfigPath =  /home/llr/cms/cappati/240516_ticlv5/CMSSW_14_1_X_2024-05-15-1100/src/HGCalReco_prod/condor_pions_step2
 
 executable = $(ConfigPath)/condor.sh
 transfer_input_files = $(ConfigPath)/CloseByParticle_Pion_GEN_SIM.py, $(ConfigPath)/step2_DIGI_L1TrackTrigger_L1_DIGI2RAW_HLT_PU.py
@@ -19,6 +19,5 @@ T3Queue = $(T3Queue:short)
 WNTag = $(WNTag:el7)
 include : /opt/exp_soft/cms/t3/t3queue |
 
-priority=-15
 
-queue SampleId from seq 200 300 |
+queue SampleId from seq 1 2 |
