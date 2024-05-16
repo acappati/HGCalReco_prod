@@ -20,4 +20,4 @@ WNTag = $(WNTag:el7)
 include : /opt/exp_soft/cms/t3/t3queue |
 
 
-queue SampleId from seq 1 2 |
+queue SampleId from seq 1 500 |
