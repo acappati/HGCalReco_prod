@@ -30,7 +30,7 @@ process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 process.RandomNumberGeneratorService.generator.initialSeed = cms.untracked.uint32(81)
 
 process.maxEvents = cms.untracked.PSet(
-        input = cms.untracked.int32(50),
+        input = cms.untracked.int32(100),
     output = cms.optional.untracked.allowed(cms.int32,cms.PSet)
 )
 
@@ -102,10 +102,10 @@ process.generator = cms.EDProducer("CloseByParticleGunProducer",
     AddAntiParticle = cms.bool(True),
     PGunParameters = cms.PSet(
         ControlledByEta = cms.bool(True),
-        MaxEnSpread = cms.bool(False),
+        MaxVarSpread = cms.bool(False),
         Delta = cms.double(0),
-        EnMax = cms.double(1000.0),
-        EnMin = cms.double(300.0),
+        VarMax = cms.double(1000.0),
+        VarMin = cms.double(300.0),
         MaxEta = cms.double(2.75),
         MaxPhi = cms.double(3.14159265359),
         MinEta = cms.double(1.65),
