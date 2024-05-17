@@ -1,6 +1,6 @@
 
 executable = condor_step3.sh
-transfer_input_files = ../step3_ticlv5.py
+transfer_input_files = step3_ticlv5.py
 environment = "INDEX=$(SampleId) INPUT_FOLDER=$(InputFolder)"
 universe = vanilla
 output = logs/step3_$(SampleId).out
@@ -16,5 +16,5 @@ T3Queue = $(T3Queue:long)
 WNTag = $(WNTag:el7)
 include : /opt/exp_soft/cms/t3/t3queue |
 
-InputFolder = /grid_mnt/data__data.polcms/cms/tarabini/photons_forPID/step2/
-queue SampleId from seq 1 50 | 
+InputFolder = /grid_mnt/data__data.polcms/cms/cappati/240516_photonsD98_step2/
+queue SampleId from seq 1 500 | 
