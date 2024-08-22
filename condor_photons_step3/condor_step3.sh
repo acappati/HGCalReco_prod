@@ -2,7 +2,7 @@
 set -e
 
 source /cvmfs/cms.cern.ch/cmsset_default.sh
-cd /home/llr/cms/cappati/240516_ticlv5/CMSSW_14_1_X_2024-05-15-1100/
+cd /home/llr/cms/cappati/240821_ticl/CMSSW_14_1_0_pre4/
 cmsenv
 cd - 
 
@@ -13,6 +13,6 @@ EOF
 cmsRun -n 8 step3_ticlv5.py
 
 set +e
-mkdir -p /grid_mnt/data__data.polcms/cms/cappati/240517_photonsD98_step3/
-mv dumper.root /grid_mnt/data__data.polcms/cms/cappati/240517_photonsD98_step3/step3_dumper_$INDEX.root
+mkdir -p /grid_mnt/data__data.polcms/cms/cappati/240821_photonsD98_2-15GeV_step3/
+mv dumper.root /grid_mnt/data__data.polcms/cms/cappati/240821_photonsD98_2-15GeV_step3/step3_dumper_$INDEX.root
 

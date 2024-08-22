@@ -1,5 +1,5 @@
 # Parameters (need absolute paths)
-ConfigPath =  /home/llr/cms/cappati/240516_ticlv5/CMSSW_14_1_X_2024-05-15-1100/src/HGCalReco_prod/condor_photons_step2
+ConfigPath =  /home/llr/cms/cappati/240821_ticl/CMSSW_14_1_0_pre4/src/HGCalReco_prod/condor_photons_step2
 
 executable = $(ConfigPath)/condor.sh
 transfer_input_files = $(ConfigPath)/CloseByParticle_Photon_GEN_SIM.py, $(ConfigPath)/step2_DIGI_L1TrackTrigger_L1_DIGI2RAW_HLT_PU.py
@@ -20,4 +20,4 @@ WNTag = $(WNTag:el7)
 include : /opt/exp_soft/cms/t3/t3queue |
 
 
-queue SampleId from seq 1 500 |
+queue SampleId from seq 1 300 |

@@ -16,5 +16,5 @@ T3Queue = $(T3Queue:long)
 WNTag = $(WNTag:el7)
 include : /opt/exp_soft/cms/t3/t3queue |
 
-InputFolder = /grid_mnt/data__data.polcms/cms/cappati/240516_photonsD98_step2/
-queue SampleId from seq 1 500 | 
+InputFolder = /grid_mnt/data__data.polcms/cms/cappati/240821_photonsD98_2-15GeV_step2/
+queue SampleId from seq 1 300 | 
