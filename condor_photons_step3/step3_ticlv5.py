@@ -7,9 +7,11 @@
 import FWCore.ParameterSet.Config as cms
 
 from Configuration.Eras.Era_Phase2C17I13M9_cff import Phase2C17I13M9
-from Configuration.ProcessModifiers.ticl_v5_cff import ticl_v5, ticl_v5_mustache
+from Configuration.ProcessModifiers.ticl_v5_cff import ticl_v5
+from  Configuration.ProcessModifiers.ticl_superclustering_mustache_ticl_cff import  ticl_superclustering_mustache_ticl
 
-process = cms.Process('RECO',Phase2C17I13M9,ticl_v5,ticl_v5_mustache)
+process = cms.Process('RECO',Phase2C17I13M9,ticl_v5,ticl_superclustering_mustache_ticl)
+
 
 # import of standard configurations
 process.load('Configuration.StandardSequences.Services_cff')
